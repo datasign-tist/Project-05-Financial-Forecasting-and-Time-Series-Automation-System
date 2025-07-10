@@ -15,4 +15,6 @@ Clarify the accuracy expectations (how close the forecasts need to be to actuals
 Engage with cross-functional teams, including Risk Management (to assess credit risk and defaults), Finance (for budgeting and revenue planning), and Technology Teams (for deployment and automation). Understanding their objectives and constraints is key to building a relevant and usable solution.
 
 All 3 steps are crucially important as these are like Google Maps, and without them, your project will be directionless. 
+
 ---
+
