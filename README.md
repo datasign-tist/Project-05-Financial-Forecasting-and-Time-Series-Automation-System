@@ -18,3 +18,27 @@ All 3 steps are crucially important as these are like Google Maps, and without t
 
 ---
 
+## Step 02: Data Collection & Exploration :
+
+To gather high-quality, relevant historical data and perform exploratory analysis to understand patterns, seasonality, and data quality—forming the backbone for accurate forecasting models.
+
+Here’s a **clear and well-elaborated version of Step 2** for your **Financial Forecasting & Time Series Automation System** including sources and methods:
+
+### A. Data Collection:
+
+1. Customer Payments & Transaction History: Payment behavior, loan repayments, prepayments, delinquencies—sourced from internal databases or data warehouses (SQL, Cloud storage).
+2. Internal default data from risk and collections teams, augmented with credit bureau reports (e.g., CIBIL, Experian) where available.
+3. Downloaded from public data sources like RBI, World Bank, IMF, or financial APIs (GDP growth, inflation, unemployment, interest rates).
+
+
+### B. Data Exploration ( EDA ):
+
+Before modeling, perform a thorough data check to ensure the integrity and usability of the data for time series forecasting.
+
+1. Missing Values: Identify gaps in time series data and apply appropriate imputation techniques (forward-fill, interpolation, model-based imputation).
+2. Outliers: Detect anomalies (e.g., payment spikes, negative values) using statistical methods or visual inspection.
+3. Structural Breaks:Look for sudden changes in the data series due to events like policy changes, economic crises, or internal business shifts.
+4. Seasonality & Trends: Plot time series (line plots, autocorrelation plots) to uncover trends, seasonality (monthly, quarterly patterns), and cyclic behaviors.
+
+---
+
