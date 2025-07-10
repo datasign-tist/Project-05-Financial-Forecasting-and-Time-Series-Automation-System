@@ -3,6 +3,23 @@ Built an automated time series forecasting system to predict revenue, default ra
 
 ---
 
+## Requirements:
+* Collect historical financial data (customer payments, default history, macroeconomic indicators).
+* Implement feature engineering for time series data (lags, rolling stats, seasonality).
+* Build models using ARIMA, SARIMA, Prophet, and LSTM for time series forecasting.
+* Deploy the model as an API using FastAPI and Docker on AWS or GCP.
+* Automate pipelines using Airflow with alerts on performance dips.
+
+## Skills Covered:
+* Time Series Modelling: ARIMA, SARIMA, Prophet, LSTM.
+* Programming: Python, Advanced SQL, PySpark.
+* Big Data & MLOps: Airflow, Docker, Kubernetes, MLflow.
+* Cloud: AWS, GCP.
+* Visualisation: Tableau, Data Storytelling.
+* Model Explainability: SHAP, LIME.
+
+---
+
 ## Step 01: Problem Understanding & Business Requirements :
 
 ### A. Define Forecasting Targets:
