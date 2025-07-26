@@ -1,70 +1,49 @@
-# Project-05-Financial-Forecasting-and-Time-Series-Automation-System
-Built an automated time series forecasting system to predict revenue, default rates, and asset values, helping the business improve financial planning, risk management, and decision-making.
+# Project-05-Generative-AI-Driven-Credit-Risk-Copilot
+An end-to-end Generative AI–driven Credit Risk Copilot combining Basel III/IFRS-9 scorecards with a Retrieval-Augmented Generation assistant for explainable underwriting.
 
 ---
 
-## Requirements:
-* Collect historical financial data (customer payments, default history, macroeconomic indicators).
-* Implement feature engineering for time series data (lags, rolling stats, seasonality).
-* Build models using ARIMA, SARIMA, Prophet, and LSTM for time series forecasting.
-* Deploy the model as an API using FastAPI and Docker on AWS or GCP.
-* Automate pipelines using Airflow with alerts on performance dips.
+# Credit Risk Copilot
 
-## Skills Covered:
-* Time Series Modelling: ARIMA, SARIMA, Prophet, LSTM.
-* Programming: Python, Advanced SQL, PySpark.
-* Big Data & MLOps: Airflow, Docker, Kubernetes, MLflow.
-* Cloud: AWS, GCP.
-* Visualisation: Tableau, Data Storytelling.
-* Model Explainability: SHAP, LIME.
+**An end-to-end Generative AI–Driven Credit Risk Copilot**  
+Combines classical credit risk analytics (PD, EAD, LGD) with a Retrieval-Augmented Generation (RAG) layer to deliver explainable, source-cited underwriting decisions and automate the full model lifecycle on AWS.
 
 ---
 
-## Step 01: Problem Understanding & Business Requirements :
+## 1. Project Overview
 
-### A. Define Forecasting Targets:
-Identify the key financial metrics to forecast—primarily Revenue, Default Rates, and Asset Values—which are critical for business planning, risk assessment, and investor reporting.
+The Credit Risk Copilot is designed for risk analysts and underwriters at banks, fintechs, and hedge funds. It integrates:
 
-### B. Understand Business Impact:
-Clarify the accuracy expectations (i.e., how closely the forecasts need to match actual values), forecast horizon (e.g., monthly, quarterly, yearly predictions), and latency tolerance (i.e., how quickly the forecasts need to be generated and updated). This ensures the model meets real-world decision-making needs.
+- **Regulatory Scorecards:** Implements Basel III credit metrics (Probability of Default, Exposure at Default, Loss Given Default) and IFRS-9 expected credit loss staging.  
+- **Generative-AI Assistant:** A conversational interface powered by large language models (e.g., OpenAI GPT) with document retrieval (FAISS/Pinecone) to answer policy questions, justify risk decisions with citations, and surface supporting scorecard outputs.  
+- **Full MLOps Pipeline:** Real-time ETL (Kafka → PySpark → Snowflake), feature engineering, model training, experiment tracking (MLflow), governance gates, drift monitoring, and serverless deployment (AWS Lambda/ECS).  
+- **Explainability & Reporting:** SHAP/LIME dashboards and audit trails for regulators, delivered via Tableau or a BI interface.
 
-### C. Identify Stakeholders:
-Engage with cross-functional teams, including Risk Management (to assess credit risk and defaults), Finance (for budgeting and revenue planning), and Technology Teams (for deployment and automation). Understanding their objectives and constraints is key to building a relevant and usable solution.
+### Objectives & Scope
 
-All three steps are crucially important, as they are like Google Maps - without them, your project will be directionless. 
+- Automate borrower credit assessments while maintaining full interpretability and auditability.  
+- Reduce underwriting cycle time from days to minutes with AI-driven recommendations.  
+- Ensure compliance with Basel III, IFRS-9, and CECL through embedded scorecard logic and explainability.  
+- Deploy on cloud with robust security (IAM, KMS, VPC) and governance controls.
 
----
+### Success Metrics
 
-## Step 02: Data Collection & Exploration :
-
-To gather high-quality, relevant historical data and perform exploratory analysis to understand patterns, seasonality, and data quality, forming the backbone for accurate forecasting models.
-
-### A. Data Collection:
-
-1. Customer Payments & Transaction History: Payment behaviour, loan repayments, prepayments, delinquencies—sourced from internal databases or data warehouses (SQL, Cloud storage).
-2. Internal default data from risk and collections teams, augmented with credit bureau reports (e.g., CIBIL, Experian) where available.
-3. Downloaded from public data sources like RBI, World Bank, IMF, or financial APIs (GDP growth, inflation, unemployment, interest rates).
-
-### B. Data Exploration ( EDA ):
-
-Before modelling, perform a thorough data check to ensure the integrity and usability of the data for time series forecasting.
-
-1. Missing Values: Identify gaps in time series data and apply appropriate imputation techniques (forward-fill, interpolation, model-based imputation).
-2. Outliers: Detect anomalies (e.g., payment spikes, negative values) using statistical methods or visual inspection.
-3. Structural Breaks: Look for sudden changes in the data series due to events like policy changes, economic crises, or internal business shifts.
-4. Seasonality & Trends: Plot time series (line plots, autocorrelation plots) to uncover trends, seasonality (monthly, quarterly patterns), and cyclic behaviours.
-
-### C. Data Sources :
-Target - A clean, complete and integrated dataset involving customer payment history, default history, and economic indicators. 
-
-1. Payment_History : Loan details of customers and their repayment, default and prepayment history.
-2. Default_History : Above data to understand the default patterns.
-3. Macroeconomic_Factors : To understand the macro economical affects on the above 2.
-
-After Finalising the datasets, we move to EDA.
+- Average decision turnaround time ≤ 5 minutes  
+- Scorecard accuracy: PD/AUC ≥ 0.75  
+- RAG response precision ≥ 90% on policy queries  
+- Zero critical security or compliance violations in audit reviews
 
 ---
 
-## Step 03: Exploratory Data Analysis:
+## 2. Key Features
+
+- **Real-Time Data Ingestion:** Kafka-driven pipelines for loan origination and transactions.  
+- **Hybrid Scoring Engine:** Combines statistical scorecards with AI explanations.  
+- **Interactive Chat UI:** Web interface for analysts to query and review decisions.  
+- **Automated Retraining:** Airflow-scheduled batch retraining with drift alerts.  
+- **Governance Dashboards:** SHAP value visualisations and regulatory reporting logs.
+
+---
+
 
 
