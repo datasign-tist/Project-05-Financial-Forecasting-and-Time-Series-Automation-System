@@ -44,67 +44,36 @@ This project aims to achieve:
 
 ## 2. Technical & Domain Knowledge Required :
 
-This section outlines the essential domain knowledge, regulatory frameworks, business needs, and technical specifications that form the foundation of the Credit Risk Copilot.
+This section highlights the technical knowledge, core risk theory, and practical tools you need to master for building the Credit Risk Copilot.
 
-### A. Credit Risk Fundamentals
+### 2.1 Technical & Theoretical Topics to Revise
 
-- **Key Metrics:**
-  - **Probability of Default (PD):** Likelihood of borrower default within a given timeframe.
-  - **Exposure at Default (EAD):** Total value a bank is exposed to when a borrower defaults.
-  - **Loss Given Default (LGD):** Proportion of the exposure that is lost after default.
-  - **Expected Credit Loss (ECL):** Calculated as \( ECL = PD \times EAD \times LGD \), in line with IFRS 9 staging concepts.
+- **Credit Risk Modeling:**
+  - Probability of Default (PD) — scoring, calibration, and validation
+  - Exposure at Default (EAD) — aggregation from transactional data
+  - Loss Given Default (LGD) — recovery estimation methods
+  - Expected Credit Loss (ECL) calculation
+  - Classic scorecards vs. tree-ensemble models
 
-- **Regulatory Frameworks:**
-  - Basel III for capital adequacy and credit risk measurement.
-  - IFRS 9 and CECL accounting standards for expected credit loss calculation.
+- **Machine Learning Interpretability:**
+  - SHAP values & interaction values
+  - LIME for local explanations
+  - Reason code generation in finance
 
-### B. Regulatory Compliance
+- **Retrieval-Augmented Generation (RAG):**
+  - Architectures and workflows for combining LLMs and document retrieval
+  - Embedding techniques and vector search principles
 
-- Ensure all credit decisions provide a full audit trail, including model inputs, outputs, and versioning.
-- Provide explainability through reason codes and SHAP/LIME values to satisfy regulatory requirements.
-- Implement approval and governance workflows for model deployment and changes.
-- Retain credit decision logs according to data privacy (GDPR, CCPA) and financial regulations.
+### 2.2 Tools, Frameworks, and Libraries to Learn
 
-### C. Business & Functional Requirements
+- **Data Engineering & Pipelines:**
+  - Apache Kafka (streaming ETL)
+  - PySpark (distributed processing)
+  - Apache Airflow (workflow orchestration)
+  - Advanced SQL and Snowflake (cloud data warehousing)
 
-- Target users: risk analysts, underwriters, compliance officers.
-- Automate underwriting workflows to reduce decision time while maintaining accuracy.
-- Support ingestion of both structured data (loan origination, transactions) and unstructured data (policy documents).
-- Deliver interactive, explainable recommendations and justifications through the AI assistant.
-
-### D. Technical Requirements
-
-- Real-time and batch data pipelines using Kafka, Apache Spark, and Airflow.
-- Scalable cloud infrastructure on AWS including Lambda, ECS, Snowflake, and secure networking (VPC).
-- Security via encrypted data storage and transfer (AWS KMS), with fine-grained IAM access control.
-- High availability and scalability to support thousands of daily credit decisions.
-
-### E. Model & AI Layer Requirements
-
-- Combine interpretable classical credit risk scorecards with advanced Generative AI explanations.
-- Use Retrieval-Augmented Generation (RAG) with vector databases such as FAISS or Pinecone for document retrieval.
-- Enable automated retraining, drift detection, and robust version control using MLflow.
-
-### F. Explainability & Reporting
-
-- Provide SHAP/LIME-based explainability visualizations and dashboards using Tableau or similar BI tools.
-- Generate audit-ready reports documenting every underwriting decision.
-- Log decisions, model inputs, and versions for full traceability.
-
-### G. Non-Functional Requirements
-
-- Maintain service reliability and system uptime with monitoring and alerting.
-- Ensure compliance with data privacy laws and financial industry standards.
-- Maintain clear documentation and coding standards to support continuous delivery and easy maintenance.
-
-### H. Deliverables
-
-- Documentation of credit risk domain, KPIs, and regulatory frameworks.
-- Business rules and user requirements for automated underwriting.
-- Detailed technical stack and infrastructure specification.
-- Security and compliance guidelines.
-- Performance targets and monitoring frameworks.
-- Data governance and audit trail plans.
+- **Modeling & AI:**
+  - Python ML stack: sc
 
 ---
 
